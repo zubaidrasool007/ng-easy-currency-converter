@@ -1,0 +1,19 @@
+
+<table tuiTable [columns]="columns">
+    <thead>
+        <tr tuiThGroup>
+            <th tuiTh [resizable]="true">Currency Name</th>
+            <th tuiTh>Rate</th>
+        </tr>
+    </thead>
+    <tbody tuiTbody [data]="currenciesAarray">
+        <tr *tuiRow="let item of currenciesAarray; let index = index" tuiTr>
+            <td *tuiCell="'key'" tuiTd>{{item.key}}</td>
+            <td *tuiCell="'value'" tuiTd>{{item.value}}</td>
+            
+            
+        </tr>
+    </tbody>
+</table>
+
+

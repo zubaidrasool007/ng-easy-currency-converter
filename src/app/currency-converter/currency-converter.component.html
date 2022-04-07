@@ -1,0 +1,38 @@
+<div>
+    <div class="dropdown">
+        
+            <tui-select #select class="b-form" [(ngModel)]="baseCurrency">
+                Base Currency
+                <tui-data-list *tuiDataList>
+                    <tui-opt-group label="Base Currency">
+                        <button *ngFor="let item of currenciesAarray" tuiOption [value]="item.key">
+                            {{ item.key }}
+                        </button>
+                    </tui-opt-group>
+                </tui-data-list>
+            </tui-select>
+        
+        <form class="b-form" [formGroup]="testForm">
+            <form class="b-form" [formGroup]="testForm">
+                <tui-input formControlName="testValue">
+                    Add value
+                    <input tuiTextfield type="number" />
+                </tui-input>
+            </form>
+        </form>
+            <tui-select #select  class="b-form" [(ngModel)]="targetCurrency"
+            
+            >
+                Target Currency
+                
+                <tui-data-list *tuiDataList="currenciesAarray.key" >
+                    <tui-opt-group label="Target Currency">
+                        <button *ngFor="let item of currenciesAarray" tuiOption [value]="item.key">
+                            {{ item.key }}
+                        </button>
+                      
+                    </tui-opt-group>
+                </tui-data-list>
+            </tui-select>
+        </div>
+    </div>

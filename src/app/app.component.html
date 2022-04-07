@@ -1,0 +1,35 @@
+<tui-tabs [(activeItemIndex)]="activeItemIndex">
+  <button tuiTab routerLink="/home" class="tui-space_left-10" >
+      <!-- <tui-svg src="tuiIconCard" class="tui-space_right-2"></tui-svg> -->
+      Home
+  </button>
+  <button tuiTab routerLink="/table" >
+      <!-- <tui-svg src="tuiIcon" class="tui-space_right-2"></tui-svg> -->
+      Rate List
+  </button>
+</tui-tabs>
+
+<tui-root>
+  <!-- content of your app -->
+
+  <!--
+   If you need, you can add something between Taiga portal layers:
+  -->
+  <ng-container ngProjectAs="tuiOverContent">
+      <!-- Content over app content -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverDialogs">
+      <!-- Content over dialogs -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverNotifications">
+      <!-- Content over notifications -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverPortals">
+      <!-- Content over dropdowns -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverHints">
+      <!-- Content over hints -->
+  </ng-container>
+</tui-root>
+
+<router-outlet></router-outlet>
