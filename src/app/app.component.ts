@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, retry } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { LoadcurrenyApi } from './currencyApi.actions';
+
 
 @Component({
   selector: 'app-root',
@@ -11,11 +11,16 @@ import { LoadcurrenyApi } from './currencyApi.actions';
 })
 export class AppComponent implements OnInit{
   title = 'currency-converter';
-  activeItemIndex = 0;
+  activeItemIndex:any
+  targetCurrency:any;
+  getCurrencies:any[]=[];
  
  
 
   ngOnInit(): void {
-    
+   
+  }
+  targetvalue(item:any){
+
   }
 }
