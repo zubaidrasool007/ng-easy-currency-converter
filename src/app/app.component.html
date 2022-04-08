@@ -1,12 +1,25 @@
 <tui-tabs [(activeItemIndex)]="activeItemIndex">
   <button tuiTab routerLink="/home" class="tui-space_left-10" >
-      <!-- <tui-svg src="tuiIconCard" class="tui-space_right-2"></tui-svg> -->
       Home
   </button>
   <button tuiTab routerLink="/table" >
-      <!-- <tui-svg src="tuiIcon" class="tui-space_right-2"></tui-svg> -->
       Rate List
   </button>
+
+  <tui-select #select class="b-form" [(ngModel)]="targetCurrency">
+    Target Currency
+
+    <tui-data-list *tuiDataList>
+        <tui-opt-group label="Target Currency">
+            <button (click)="targetvalue(item)" *ngFor="let item of getCurrencies" tuiOption [value]="item.key">
+                {{ item.key }}
+            </button>
+
+        </tui-opt-group>
+    </tui-data-list>
+</tui-select>
+
+
 </tui-tabs>
 
 <tui-root>
