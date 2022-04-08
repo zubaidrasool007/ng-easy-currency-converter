@@ -24,6 +24,9 @@ import { TuiDropdownModule } from '@taiga-ui/core';
 import { TuiDataListModule } from '@taiga-ui/core';
 import { TuiDataListWrapperModule, TuiSelectModule } from '@taiga-ui/kit';
 import {TuiTableModule} from '@taiga-ui/addon-table';
+import {TuiInputNumberModule} from '@taiga-ui/kit';
+
+
 
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
@@ -56,7 +59,7 @@ export class MyModule {}
     TuiSelectModule,
     TuiDataListModule,
     TuiDataListWrapperModule,
-    TuiTableModule,
+    TuiTableModule,TuiInputNumberModule,
     StoreModule.forRoot( {currency:currencyReducer
     
     }),
