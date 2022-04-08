@@ -1,4 +1,26 @@
+
+.main{
+    /* width: 600px; */
+    display: flex;
+    justify-content: center;  
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+  
+    box-shadow: rgba(253, 182, 182, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
 .dropdown{
     display: flex;
     flex-direction: row;
+    padding: 20px;
+}
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
