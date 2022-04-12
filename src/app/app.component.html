@@ -1,48 +1,57 @@
-<tui-tabs [(activeItemIndex)]="activeItemIndex">
-  <button tuiTab routerLink="/home" class="tui-space_left-10" >
-      Home
-  </button>
-  <button tuiTab routerLink="/table" >
-      Rate List
-  </button>
+<tui-tabs [(activeItemIndex)]="activeItemIndex" class="tab">
+    <div class="tabitem">
 
-  <tui-select #select class="b-form" [(ngModel)]="targetCurrency">
-    Target Currency
+    <button  tuiTab routerLink="/home" class="tui-space_left-10 homebtn">
+        Home
+    </button>
 
-    <tui-data-list *tuiDataList>
-        <tui-opt-group label="Target Currency">
-            <button (click)="targetvalue(item)" *ngFor="let item of getCurrencies" tuiOption [value]="item.key">
-                {{ item.key }}
-            </button>
+    <button tuiTab routerLink="/table" class="homebtn">
+        Rate List
+    </button>
 
-        </tui-opt-group>
-    </tui-data-list>
-</tui-select>
+    <div class="dropdown">
+        <tui-select #select [(ngModel)]="targetCurrency" class="setdefault">
+            Base Currency
+            <tui-data-list *tuiDataList>
+                <tui-opt-group label="Target Currency">
+                    <button (click)="targetvalue(item)" *ngFor="let item of getCurrencies" tuiOption [value]="item.key">
+                        {{ item.key }}
+                    </button>
+                </tui-opt-group>
+            </tui-data-list>
+        </tui-select>
 
+   
+    <button tuiButton type="button" appearance="primary" class="tui-space_right-3 tui-space_bottom-3"
+        (click)="addcurrency()">
+        Add
+    </button>
+</div>
+</div>
 
 </tui-tabs>
 
 <tui-root>
-  <!-- content of your app -->
-
-  <!--
-   If you need, you can add something between Taiga portal layers:
-  -->
-  <ng-container ngProjectAs="tuiOverContent">
-      <!-- Content over app content -->
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverDialogs">
-      <!-- Content over dialogs -->
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverNotifications">
-      <!-- Content over notifications -->
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverPortals">
-      <!-- Content over dropdowns -->
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverHints">
-      <!-- Content over hints -->
-  </ng-container>
+    <!-- content of your app -->
+ 
+    <!--
+     If you need, you can add something between Taiga portal layers:
+    -->
+    <ng-container ngProjectAs="tuiOverContent">
+        <!-- Content over app content -->
+    </ng-container>
+    <ng-container ngProjectAs="tuiOverDialogs">
+        <!-- Content over dialogs -->
+    </ng-container>
+    <ng-container ngProjectAs="tuiOverNotifications">
+        <!-- Content over notifications -->
+    </ng-container>
+    <ng-container ngProjectAs="tuiOverPortals">
+        <!-- Content over dropdowns -->
+    </ng-container>
+    <ng-container ngProjectAs="tuiOverHints">
+        <!-- Content over hints -->
+    </ng-container>
 </tui-root>
 
 <router-outlet></router-outlet>
