@@ -9,8 +9,8 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
 
-  getcurrencyData(){
-     return this.http.get<any>("https://v6.exchangerate-api.com/v6/65e12d857703c1673a8e23dc/latest/PKR")
+  getcurrencyData(data = "PKR"){
+    return this.http.get<any>("https://v6.exchangerate-api.com/v6/af1b8c6ec427896c2079b107/latest/"+data)
   }
 
 }
