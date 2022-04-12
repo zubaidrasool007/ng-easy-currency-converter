@@ -1,0 +1,31 @@
+.tabitem{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-content: space-between;
+
+}
+.dropdown{
+   display: flex;
+   flex-direction: row;
+   gap: 5px;
+   margin-left: 570px;
+
+   
+}
+.setdefault{
+   width: 170px;
+}
+.tab{
+ background-color: #3d9295;
+ padding: 10px;
+}
+.homebtn{
+   color: white;
+   font-weight: 700px;
+   padding: 10px;
+
+   background-color: #526ed3;
+   border-radius: 8px;
+ 
+}
