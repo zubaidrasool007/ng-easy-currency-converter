@@ -31,11 +31,10 @@ export class CurrencyConverterComponent implements OnInit {
   constructor(private store: Store<{ currency: { currencies: any[] } }>) {}
 
   ngOnInit(): void {
-    this.store.dispatch(LoadcurrenyApi());
+ 
     this.currencies$.subscribe((res) => {
       this.currenciesAarray = res;
-      // console.log("arrrrrrr",this.currenciesAarray)
-   
+    
     });
   }
 
@@ -49,7 +48,7 @@ export class CurrencyConverterComponent implements OnInit {
   }
   convertCurrency() {
     console.log(this.inputValue);
-    this.currencyResult = (this.inputValue /  this.baseCurrencyValue.value) 
-    *this.targetCurrencyValue.value;
+    this.currencyResult = (this.inputValue /  this.baseCurrencyValue.value
+    *this.targetCurrencyValue.value).toFixed(2)
   }
 }
