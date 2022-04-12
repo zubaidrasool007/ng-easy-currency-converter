@@ -1,14 +1,14 @@
 <div class="main">
     <div class="container">
         <div class="dropdown">
-        
+
             <tui-select #select class="b-form" [(ngModel)]="baseCurrency">
                 Base Currency
                 <tui-data-list *tuiDataList>
                     <tui-opt-group label="Base Currency">
-                        <button (click)="baseSubmit(item)" *ngFor="let item of currenciesAarray" 
-                            tuiOption [value]="item.key" >
-           
+                        <button (click)="baseSubmit(item)" *ngFor="let item of currenciesAarray" tuiOption
+                            [value]="item.key">
+
                             {{ item.key }}
                         </button>
                     </tui-opt-group>
@@ -16,8 +16,8 @@
             </tui-select>
 
             <tui-input-number prefix="" tuiHintContent="Using cleaner is not recommended ;)" class="input"
-                [(ngModel)]="inputValue" >
-                Type Number
+                [(ngModel)]="inputValue">
+                Amount
             </tui-input-number>
 
             <tui-select #select class="b-form" [(ngModel)]="targetCurrency">
@@ -25,22 +25,21 @@
 
                 <tui-data-list *tuiDataList>
                     <tui-opt-group label="Target Currency">
-                        <button (click)="targetSubmit(item)" *ngFor="let item of currenciesAarray" tuiOption [value]="item.key">
+                        <button (click)="targetSubmit(item)" *ngFor="let item of currenciesAarray" tuiOption
+                            [value]="item.key">
                             {{ item.key }}
                         </button>
 
                     </tui-opt-group>
                 </tui-data-list>
             </tui-select>
-
-            <button tuiButton type="button" appearance="primary" class="tui-space_right-3 tui-space_bottom-3"
-                (click)="convertCurrency()">
-                Convert
-            </button>
-           
         </div>
-        
-    </div>
-</div>
-<div class="result">{{currencyResult}}</div>
+        <button tuiButton type="button" appearance="primary" class="tui-space_right-3 tui-space_bottom-3"
+            (click)="convertCurrency()">
+            Convert
+        </button>
+        <div class="result">{{currencyResult    }}</div>
 
+    </div>
+
+</div>
