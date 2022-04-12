@@ -11,8 +11,8 @@ export class CurrencyApiEffects {
   LoadcurrenyApi$ = createEffect(() =>
     this.actions$.pipe(
       ofType(LoadcurrenyApi),
-      mergeMap(() =>
-        this.service.getcurrencyData()
+      mergeMap((action) =>
+        this.service.getcurrencyData(action.data)
           .pipe(
             map((currencyData) =>
               LoadSuccesscurrencyApi({ currencies: currencyData })
