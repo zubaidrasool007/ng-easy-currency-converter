@@ -1,0 +1,35 @@
+.table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    flex-direction: column;
+}
+
+
+th,
+td {
+  font-weight: 500;
+  padding: 10px;
+ 
+
+}
+
+th {
+    background-color:#3d9295 ;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+
+    
+  }
+  tbody,td{
+      width: 500px;
+
+  }
+  td {
+    text-align: center;
+  }
+
+
+
