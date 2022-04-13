@@ -1,6 +1,13 @@
-# CurrencyConverter
+## Currency-Converter
+This poject is use to convert the currency.
 
+## Stack
+- Angular App
+- Taiga Ui
+# CurrencyConverter
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+
+
 
 ## Development server
 
