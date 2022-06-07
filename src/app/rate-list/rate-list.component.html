@@ -1,20 +1,18 @@
 <div class="table">
-    <div>
+  <div>
     <table tuiTable class="table" [columns]="columns">
-        <thead>
-            <tr tuiThGroup>
-                <th style="width: 241px;" tuiTh [resizable]="true">Currency Name</th>
-                <th style="width: 259px" tuiTh>Rate</th>
-            </tr>
-        </thead>
-        <tbody tuiTbody [data]="currenciesAarray">
-            <tr *tuiRow="let item of currenciesAarray; let index = index" tuiTr>
-                <td *tuiCell="'key'" tuiTd>{{item.key}}</td>
-                <td *tuiCell="'value'" tuiTd>{{item.value}}</td>
-
-            </tr>
-        </tbody>
-
+      <thead>
+        <tr tuiThGroup>
+          <th style="width: 241px" tuiTh [resizable]="true">Currency Name</th>
+          <th style="width: 259px" tuiTh>Rate</th>
+        </tr>
+      </thead>
+      <tbody tuiTbody [data]="currenciesAarray">
+        <tr *tuiRow="let item of currenciesAarray; let index = index" tuiTr>
+          <td *tuiCell="'key'" tuiTd>{{ item.key }}</td>
+          <td *tuiCell="'value'" tuiTd>{{ item.value }}</td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
 </div>

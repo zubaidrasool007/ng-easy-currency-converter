@@ -12,43 +12,36 @@ import { LoadcurrenyApi } from '../currencyApi.actions';
 })
 export class CurrencyConverterComponent implements OnInit {
   targetCurrency: any;
-  targetCurrencyValue:any;
+  targetCurrencyValue: any;
   baseCurrency: any;
-  baseCurrencyValue:any;
+  baseCurrencyValue: any;
   inputValue: any = '';
-  currencyResult: any=0;
-
+  currencyResult: any = 0;
   readonly testForm = new FormGroup({
     testValue: new FormControl('mail@mail.ru'),
-});
-
+  });
   currenciesAarray: any[] = [];
   readonly columns = ['key', 'value'];
   currencies$: Observable<any> = this.store.select((state) => {
     return state.currency.currencies;
   });
-
   constructor(private store: Store<{ currency: { currencies: any[] } }>) {}
-
   ngOnInit(): void {
- 
     this.currencies$.subscribe((res) => {
       this.currenciesAarray = res;
-    
     });
   }
-
-  baseSubmit(data:any){
+  baseSubmit(data: any) {
     this.baseCurrencyValue = data;
-    // console.log(this.baseCurrencyValue);
   }
-  targetSubmit(data:any){
+  targetSubmit(data: any) {
     this.targetCurrencyValue = data;
-    // console.log(this.targetCurrencyValue);
   }
   convertCurrency() {
     console.log(this.inputValue);
-    this.currencyResult = (this.inputValue /  this.baseCurrencyValue.value
-    *this.targetCurrencyValue.value).toFixed(2)
+    this.currencyResult = (
+      (this.inputValue / this.baseCurrencyValue.value) *
+      this.targetCurrencyValue.value
+    ).toFixed(2);
   }
 }

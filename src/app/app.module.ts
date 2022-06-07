@@ -25,8 +25,7 @@ import { TuiDataListWrapperModule, TuiSelectModule } from '@taiga-ui/kit';
 import { TuiTableModule } from '@taiga-ui/addon-table';
 import { TuiInputNumberModule } from '@taiga-ui/kit';
 import { TuiTablePaginationModule } from '@taiga-ui/addon-table';
-import {  TuiScrollbarModule } from '@taiga-ui/core';
-
+import { TuiScrollbarModule } from '@taiga-ui/core';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { CurrencyApiEffects } from './currencyApi.effects';
@@ -56,7 +55,8 @@ export class MyModule {}
     TuiDataListWrapperModule,
     TuiTableModule,
     TuiInputNumberModule,
-    TuiTablePaginationModule, TuiScrollbarModule,
+    TuiTablePaginationModule,
+    TuiScrollbarModule,
     StoreModule.forRoot({ currency: currencyReducer }),
     EffectsModule.forRoot([CurrencyApiEffects]),
     EffectsModule.forFeature([CurrencyApiEffects]),
