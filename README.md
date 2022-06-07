@@ -1,14 +1,19 @@
-## Currency-Converter
-This poject is use to convert the currency.
-
-## Stack
+# Currency-Converter
+By using angular and Tagia UI to cteate this project. This project is use the convert the Currency. In this project first page is home page where is calculator and converter, where people can change the Currency. second page is all words Currency list where peple can see the Currency rate. By using this app people can change the Currency into RS or USD.
+# Stack
 - Angular App
 - Taiga Ui
 # CurrencyConverter
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
-
-
+# CurrencyConverter App Preview
+### NavBar
+![nav](https://user-images.githubusercontent.com/63468411/172362313-81b00e6c-7e5d-4a8b-94be-32fa8fef06da.png)
+### Converter
+![currency](https://user-images.githubusercontent.com/63468411/172362657-023c1c24-440e-4e6f-9c67-0c682b4d7e97.png)
+### All currency list
+![currencyTable](https://user-images.githubusercontent.com/63468411/172362781-630615b2-2ed8-4618-a444-8612848bee14.png)
+)
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
